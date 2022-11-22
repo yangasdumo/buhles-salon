@@ -27,4 +27,10 @@ describe("The Booking Salon", function () {
         assert.equal(4, services);
     });
 
+    // it("should be able to list services", async function () {
+
+    //     const services = await booking.services();
+    //     assert.equal(4, services);
+    // });
+
 });
