@@ -52,7 +52,7 @@ Make all the tests pass with, your data in the database, in `salon-booking.test.
 
 
 Service type   | Price | Stylist commission
--------------  | ---------------
+-------------  | ------|----------
 `Pedicure`      |  R130 |   25%        
 `Manicure` 	    |  R80    | 25%     
 `Make up ` 	     |  R250   | 25%  
