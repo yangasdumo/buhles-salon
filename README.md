@@ -22,8 +22,8 @@ Create 4 tables:
     - price
 
 * booking  
-    - booking_date  -> use date type
-    - booking_time  -> use time type
+    - booking_date  -> use `date` type
+    - booking_time  -> use `time` type
     - client_id 
     - treatment_id    
     - stylist_id
@@ -62,9 +62,6 @@ function                    | descriptions
 `totalIncomeForMoningBookkings(date)`| calculate the total income for all moning bookings for a specified date. Morning bookings are bookings before 12h00.
 
 
-
-
-
 Service type   | Price  
 -------------  | ------
 `Pedicure`      |  R130 
@@ -72,15 +69,4 @@ Service type   | Price
 `Make up ` 	     |  R250.00 
 `Brows & Lashes` | 	 R160.00
   
-
-
  Each service type have a stylist that specialise in that service. For each service that the stylist performs there's a commision percentage that goes to them.   
-
-
-
-
-
-
- 
-
-
