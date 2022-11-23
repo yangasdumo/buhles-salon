@@ -69,6 +69,7 @@ Service type   | Price | Stylist commission
  Each service type have a stylist that specialise in that service. For each service that the stylist performs there's a commision percentage that goes to them.   
 
 # Methods with aggregate function still needs reviewing 
+function                    | descriptions     
 ----------------------------|-----------------
 FindTheTotalIncomeForBarber | find the total in come for a barber
 calculateTotalIncomeForSalon| calculate total income for the salon
