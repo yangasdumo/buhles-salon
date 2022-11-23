@@ -61,10 +61,10 @@ Service type   | Price | Stylist commission
 ## Barber
 
 Service type   | Price | Stylist commission
--------------  | ---------------
+-------------  | -------|-----------
 `Buzz cut`      |  R35 |   25%        
-`Scissor cut` 	    |  R30    | 25%     
-`Beard trim` 	     |  R25  | 25%  
+`Scissor cut` 	|  R30    | 25%     
+`Beard trim` 	|  R25  | 25%  
 
  Each service type have a stylist that specialise in that service. For each service that the stylist performs there's a commision percentage that goes to them.   
 
