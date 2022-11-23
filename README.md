@@ -48,3 +48,35 @@ Function name            | Description
 We made a start for you by creating the `salon-booking.js` file with some tests in `salon-booking.test.js`.
 
 Make all the tests pass with, your data in the database, in `salon-booking.test.js` use the appropriate parameters and return data. The tests are not setup using specific data. You need to make sure each test tests the appropriate things.
+
+
+
+Service type   | Price | Stylist commission
+-------------  | ---------------
+`Pedicure`      |  R130 |   25%        
+`Manicure` 	    |  R80    | 25%     
+`Make up ` 	     |  R250   | 25%  
+`Brows & Lashes` | 	 160   | 25%   
+  
+## Barber
+
+Service type   | Price | Stylist commission
+-------------  | ---------------
+`Buzz cut`      |  R35 |   25%        
+`Scissor cut` 	    |  R30    | 25%     
+`Beard trim` 	     |  R25  | 25%  
+
+ Each service type have a stylist that specialise in that service. For each service that the stylist performs there's a commision percentage that goes to them.   
+
+# Methods with aggregate function still needs reviewing 
+----------------------------|-----------------
+FindTheTotalIncomeForBarber | find the total in come for a barber
+calculateTotalIncomeForSalon| calculate total income for the salon
+calcatulateTotalIncomeFormAllMoningBookkings| calculate the total income for all moning bookings
+
+
+
+
+ 
+
+
