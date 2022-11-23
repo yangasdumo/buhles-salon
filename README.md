@@ -2,33 +2,35 @@
 
 Create 4 tables: 
 
-* Client, 
-* Services, 
-* Booking 
-* Stylins. 
+* client, 
+* services, 
+* booking 
+* stylins. 
 
 ## Table structure
 
-* Client 
+* client 
     - username
     - code
 
-* Service 
-    - serviceType
+* service 
+    - service_type
     - price
 
-* Booking  
-    - Date
-    - Time
-    - Client_id
+* booking  
+    - booking_date
+    - booking_time
+    - client_id
     - service_id
-    - Stylist_id
+    - stylist_id
 
-* Stylist 
-    - commission percentage
-    - Types of service    
+* stylist 
+    - first_name
+    - last_name
+    - commission_percentage
+        
 
-The `Booking` table brings `client` and `services` and `stylist` together.
+The `booking` table brings `client` , `services` and `stylist` together.
 
 ## Factory Function
 
