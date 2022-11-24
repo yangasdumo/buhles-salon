@@ -25,7 +25,7 @@ Function name            | Description
 `findClient(phoneNumber)` | Find all data for client by their phone number
 `findTreatment(phoneNumber)` | Find a treatment by it's short code
 `findAllTreatments()` 		     |  Return all the treatments offered
-`makeBooking(clientId, serviceId, date, time)` |  Allow a client to make a booking - a booking require a clientId, serviceId, date & a time. Only 2 bookings max for a serviceId in a given timeslot & date combination is allowed. Ensure a stylist is not double booked for the the same date & time combination. Booking logic can get very complicated. Lets not go there for now. Focus on the supplied booking rules. 
+`makeBooking(clientId, serviceId, stylistId, date, time)` |  Allow a client to make a booking - a booking require a clientId, serviceId, date & a time. Only 2 bookings max for a serviceId in a given timeslot & date combination is allowed. Ensure a stylist is not double booked for the the same date & time combination. Booking logic can get very complicated. Lets not go there for now. Focus on the supplied booking rules. 
 `findAllBookings(date)` |  Find all the bookings that were made for a given date
 `findClientBookings(clientId)`  |  Find all the bookings for a client - use clientId as lookup
 `findStylistsForTreatment(treatmentId)` | Find all the stylists that ever given this treatment, the booking table is central to this function. 
