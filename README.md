@@ -11,7 +11,7 @@ Service type   | Price
 `Pedicure`      |  R175 
 `Manicure` 	    |  R215
 `Make up ` 	     |  R185.00 
-`Brows & Lashes` | 	 R160.00
+`Brows & Lashes` | 	 R240.00
 
 Create a Factory Function and a PostgreSQL database that will help her keep track of treatment bookings.
 
@@ -35,6 +35,7 @@ All tables have an `id` as primary key
 
 * treatment 
     - type
+    - code - short three letter code for each treatment
     - price
 
 * booking  
@@ -104,10 +105,12 @@ Create a Factory Function called `salonBooking` with the following methods:
 
 Function name            | Description   
 ------------------------ | ---------------
-`getStylist(phoneNumber)` 		 | Find all data for stylist by their phone number              
-`findAllServices()` 		     |  Return all the services offered
+`getStylist(phoneNumber)` 		 | Find all data for stylist by their phone number  
+findClient(phoneNumber) | Find all data for client by their phone number
+findTreatment(phoneNumber) | Find a treatment by it's short code
+`findAllTreatments()` 		     |  Return all the treatments offered
 `makeBooking(clientId, serviceId, date, time)` |  Allow a client to make a booking - a booking require a clientId, serviceId, date & a time. Only 2 bookings max for a serviceId in a given timeslot & date combination is allowed. Ensure a stylist is not double booked for the the same date & time combination.
-`findAllBookings(data)` |  Find all the bookings that were made for a given date
+`findAllBookings(date)` |  Find all the bookings that were made for a given date
 `findClientBookings(clientId)`  |  Find all the bookings for a client - use clientId as lookup
 `findStylistsForTreatment(treatmentId)` | Find all the stylists that ever given this treatment, the booking table is central to this function. 
 `findAllBookings({date, time})` |   Find all the booking made for a specific date & time combination - if only date or time is specified query for only date or time which ever one is specified. If both is specified query for both if no variables are specified return all bookings
@@ -121,10 +124,16 @@ Function name            | Description
 
 We made a start for you by creating the `salon-booking.js` factory function file with some tests in `salon-booking.test.js`.
 
-Make all the tests pass with, your data in the database, in `salon-booking.test.js` use the appropriate parameters and return data. The tests are not setup using specific data. You need to make sure each test tests the appropriate thing.
+Implement tests for all the above functions and setup a PostgeSQL in `salon-booking.test.js` use the appropriate parameters and return data. 
+
+The tests are: 
+
+* not setup using specific data. 
+* purely illustrative - you should change the test code to ensure the factory function is tested appropriately
+
+You need to make sure each test tests the appropriate function. More tests might be needed.
 
 Ensure the tests are running in **GitHub actions**.
 
 Add all your sql scripts to a `sql` folder.
-
 
