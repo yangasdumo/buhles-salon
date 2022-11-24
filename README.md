@@ -136,3 +136,18 @@ Ensure the tests are running in **GitHub actions**.
 
 Add all your sql scripts to a `sql` folder.
 
+## Workflow
+
+Fork & clone this repository.
+
+Do some proper planning to make sure you understand what is required. Clarify your understanding with the mentors please. 
+Ask for clarification if something is not clear to you.
+
+A Feedback system link will be provided for you to share your work.
+
+Add a link to your kanban board in the `readme.md` file below.
+
+## Planning links
+
+**Todo** Add links to you planning here.
+
