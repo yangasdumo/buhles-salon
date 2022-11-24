@@ -13,9 +13,7 @@ Service type   | Price
 `Make up ` 	     |  R185.00 
 `Brows & Lashes` | 	 R160.00
 
-
-
-Create a Factory Function and a database that will help her keep track of treatment bookings.
+Create a Factory Function and a PostgreSQL database that will help her keep track of treatment bookings.
 
 ## Tables to create
 
@@ -50,11 +48,18 @@ All tables have an `id` as primary key
     - first_name
     - last_name
     - phone_number
-    - commission_percentage
+    - commission_percentage -> use numeric (3,2)
+
+
+The waiter commission is in a decimal amount like `0.15` for `15%` and `0.17` for `17%` 
 
 The `booking` table brings `client`, `treatment` and `stylist` tables together.
 
-Create sql scripts to populate the `client`, `treatment` & `stylist` tables.
+Create sql scripts to pre-populate the `client`, `treatment` & `stylist` tables. 
+
+* Add the 4 treatments - use the price chart above.
+* At least 7 clients.
+* At least 5 stylists - the stylist commission is between `7` and `20%`.
 
 ## Using day & date columns
 
@@ -78,10 +83,11 @@ The query on date & time fields use queries like this:
 
 ```
 select * from test where the slot > '06:00';
+select * from test where the slot = '07:00';
 ```
 
 ```
-select * from test where the the_date > '2022-02-26';
+select * from test where the the_date > '2022-02-26' and slot = '07:00';
 ```
 
 You can use `>`, `<` and `=` signs for date and time queries.
