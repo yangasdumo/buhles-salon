@@ -1,6 +1,6 @@
 # Buhles salon
 
-Buhle has started a salon in her local shopping centre and needs a new system to keep track of her business. She currently offers 4 different treatments in her salon `Pedicure`, `Manicure`, `Make up` & `Brows & Lashes`.
+Buhle has started a salon in her local shopping centre and needs a system to keep track of her business. She currently offers 4 different treatments in her salon `Pedicures`, `Manicures`, `Make up` & `Brows & Lashes`.
 
 All stylists can do all treatments.
 
@@ -51,7 +51,7 @@ All tables have an `id` as primary key
     - commission_percentage -> use numeric (3,2)
 
 
-The waiter commission is in a decimal amount like `0.15` for `15%` and `0.17` for `17%` 
+The stylist commission is stored as a decimal amount like `0.15` for `15%` and `0.17` for `17%`.
 
 The `booking` table brings `client`, `treatment` and `stylist` tables together.
 
@@ -92,8 +92,9 @@ select * from test where the the_date > '2022-02-26' and slot = '07:00';
 
 You can use `>`, `<` and `=` signs for date and time queries.
 
-You can learn more about dates at the links below, but this is more than what you would to complete this assessment:
+You can learn more about date & time at the links below, but this is more than what you would need to complete this assessment:
 
+* https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-time/
 * https://www.prisma.io/dataguide/postgresql/date-types
 * https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-date/
 
