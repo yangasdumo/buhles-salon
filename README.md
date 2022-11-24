@@ -142,6 +142,10 @@ Add all your sql scripts to a `sql` folder.
 
 Fork & clone this repository.
 
+To get goinf do an `npm install`.
+
+To run the tests use `npm test`.
+
 Do some proper planning to make sure you understand what is required. Clarify your understanding with the mentors please. 
 Ask for clarification if something is not clear to you.
 
