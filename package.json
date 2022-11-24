@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "salon-booking.js",
-  "type": "module",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,12 @@
   },
   "homepage": "https://github.com/codex-academy/bulhes-salon#readme",
   "dependencies": {
+    "express": "^4.18.2",
+    "flash": "^1.1.0",
+    "handlebars": "^4.7.7",
     "mocha": "^10.1.0",
-    "pg-promise": "^10.15.0"
+    "nodemon": "^2.0.20",
+    "pg-promise": "^10.15.2",
+    "session": "^0.1.0"
   }
 }
