@@ -1,6 +1,6 @@
 # Buhles salon
 
-Buhle has started a salon in her local shopping centre and needs a system to keep track of her business. She currently offers 4 different treatments in her salon `Pedicures`, `Manicures`, `Make up` & `Brows & Lashes`.
+Buhle has started a salon in her local shopping centre and needs a system to keep track of her business. The salon currently offers 4 different treatments `Pedicures`, `Manicures`, `Make up` & `Brows & Lashes`.
 
 All stylists can do all treatments.
 
@@ -14,6 +14,27 @@ Service type   | Price
 `Brows & Lashes` | 	 R240.00
 
 Create a Factory Function and a PostgreSQL database that will help her keep track of treatment bookings.
+
+## Factory Function
+
+Create a Factory Function called `SalonBooking` with the following methods:
+
+Function name            | Description   
+------------------------ | ---------------
+`getStylist(phoneNumber)` 		 | Find all data for stylist by their phone number  
+findClient(phoneNumber) | Find all data for client by their phone number
+findTreatment(phoneNumber) | Find a treatment by it's short code
+`findAllTreatments()` 		     |  Return all the treatments offered
+`makeBooking(clientId, serviceId, date, time)` |  Allow a client to make a booking - a booking require a clientId, serviceId, date & a time. Only 2 bookings max for a serviceId in a given timeslot & date combination is allowed. Ensure a stylist is not double booked for the the same date & time combination.
+`findAllBookings(date)` |  Find all the bookings that were made for a given date
+`findClientBookings(clientId)`  |  Find all the bookings for a client - use clientId as lookup
+`findStylistsForTreatment(treatmentId)` | Find all the stylists that ever given this treatment, the booking table is central to this function. 
+`findAllBookings({date, time})` |   Find all the booking made for a specific date & time combination - if only date or time is specified query for only date or time which ever one is specified. If both is specified query for both if no variables are specified return all bookings
+`totalIncomeForDay(date)` | find the total income for the day specified.
+`mostValuebleClient()` | find the client that spend the most money at the salon so far
+`totalCommission(date, stylistId)`| calculate the total commission for a given date & stylist
+
+**Note:** you can add extra Factory Function method to support the above factory functions if needed.
 
 ## Tables to create
 
@@ -98,27 +119,6 @@ You can learn more about date & time at the links below, but this is more than w
 * https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-time/
 * https://www.prisma.io/dataguide/postgresql/date-types
 * https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-date/
-
-## Factory Function
-
-Create a Factory Function called `salonBooking` with the following methods:
-
-Function name            | Description   
------------------------- | ---------------
-`getStylist(phoneNumber)` 		 | Find all data for stylist by their phone number  
-findClient(phoneNumber) | Find all data for client by their phone number
-findTreatment(phoneNumber) | Find a treatment by it's short code
-`findAllTreatments()` 		     |  Return all the treatments offered
-`makeBooking(clientId, serviceId, date, time)` |  Allow a client to make a booking - a booking require a clientId, serviceId, date & a time. Only 2 bookings max for a serviceId in a given timeslot & date combination is allowed. Ensure a stylist is not double booked for the the same date & time combination.
-`findAllBookings(date)` |  Find all the bookings that were made for a given date
-`findClientBookings(clientId)`  |  Find all the bookings for a client - use clientId as lookup
-`findStylistsForTreatment(treatmentId)` | Find all the stylists that ever given this treatment, the booking table is central to this function. 
-`findAllBookings({date, time})` |   Find all the booking made for a specific date & time combination - if only date or time is specified query for only date or time which ever one is specified. If both is specified query for both if no variables are specified return all bookings
-`totalIncomeForDay(date)` | find the total income for the day specified.
-`mostValuebleClient()` | find the client that spend the most money at the salon so far
-`totalCommission(date, stylistId)`| calculate the total commission for a given date & stylist
-
-**Note:** you can add extra Factory Function method to support the above factory functions if needed.
 
 ## Factory function setup
 
