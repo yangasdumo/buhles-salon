@@ -65,9 +65,9 @@ All tables have an `id` as primary key
 * booking  
     - booking_date  -> use `date` type
     - booking_time  -> use `time` type
-    - client_id 
-    - treatment_id    
-    - stylist_id
+    - client_id  -> this is a fk (foreign key)
+    - treatment_id -> this is a fk   
+    - stylist_id -> this is a fk
 
 * stylist 
     - first_name
