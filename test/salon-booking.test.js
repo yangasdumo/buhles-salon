@@ -30,7 +30,7 @@ describe("The Booking Salon", function () {
 
     it("should be able to find a stylist", async function () {
 
-        const stylist = await booking.getStylist("***");
+        const stylist = await booking.findStylist("***");
         assert.equal('', stylist);
     });
 
