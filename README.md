@@ -52,27 +52,27 @@ Create these 4 tables:
 All tables have an `id` as primary key
 
 * client 
-   - first_name
-   - last_name
-   - phone_number
+   - `first_name`
+   - `last_name`
+   - `phone_number`
 
 * treatment 
-    - type
-    - code - short three letter code for each treatment
-    - price
+    - `type` - treatment name
+    - `code` - short three letter code for each treatment
+    - `price`
 
 * booking  
-    - booking_date  -> use `date` type
-    - booking_time  -> use `time` type
-    - client_id  -> this is a fk (foreign key)
-    - treatment_id -> this is a fk   
-    - stylist_id -> this is a fk
+    - `booking_date`  -> use `date` type
+    - `booking_time`  -> use `time` type
+    - `client_id`  -> this is a fk (foreign key)
+    - `treatment_id` -> this is a fk   
+    - `stylist_id` -> this is a fk
 
 * stylist 
-    - first_name
-    - last_name
-    - phone_number
-    - commission_percentage -> use numeric (3,2)
+    - `first_name`
+    - `last_name`
+    - `phone_number`
+    - `commission_percentage` -> use numeric (3,2)
 
 The stylist commission is stored as a decimal amount like `0.15` for `15%` and `0.17` for `17%`.
 
