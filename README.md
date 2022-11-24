@@ -21,7 +21,7 @@ Create a Factory Function and a PostgreSQL database that will help her keep trac
 
 Create a Factory Function called `SalonBooking` with the following methods:
 
-Function name            | Description   
+Method name            | Description   
 ------------------------ | ---------------
 `findStylist(phoneNumber)` 		 | Find all data for stylist by their phone number  
 `findClient(phoneNumber)` | Find all data for client by their phone number
@@ -31,13 +31,13 @@ Function name            | Description
 in a given timeslot & date combination is allowed. Ensure a stylist is not double booked for the the same date & time combination. Booking logic can get very complicated. Lets not go there for now. Focus on the supplied booking rules. 
 `findAllBookings(date)` |  Find all the bookings that were made for a given date
 `findClientBookings(clientId)`  |  Find all the bookings for a client - use clientId as lookup
-`findStylistsForTreatment(treatmentId)` | Find all the stylists that ever given this treatment, the booking table is central to this function. 
+`findStylistsForTreatment(treatmentId)` | Find all the stylists that ever given this treatment, the booking table is central to this method. 
 `findAllBookings({date, time})` |   Find all the booking made for a specific date & time combination - if only date or time is specified query for only date or time which ever one is specified. If both is specified query for both if no variables are specified return all bookings
 `totalIncomeForDay(date)` | find the total income for the day specified.
 `mostValuebleClient()` | find the client that spend the most money at the salon so far
 `totalCommission(date, stylistId)`| calculate the total commission for a given date & stylist
 
-**Note:** you can add extra Factory Function method to support the above factory functions if needed.
+**Note:** you can add extra Factory Function methods to support the above factory functions if needed.
 
 ## Tables to create
 
