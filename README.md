@@ -15,6 +15,8 @@ Service type   | Price
 
 Create a Factory Function and a PostgreSQL database that will help her keep track of treatment bookings.
 
+> **Please:** read all the instructions thoroughly before you start to do any work.
+
 ## Factory Function
 
 Create a Factory Function called `SalonBooking` with the following methods:
