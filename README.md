@@ -83,7 +83,7 @@ Create sql scripts to pre-populate the `client`, `treatment` & `stylist` tables.
 
 * Add the 4 treatments - use the price chart above.
 * Add at least 7 clients.
-* Add 5 or more stylists - the stylist commission is between `7%` and `20%`.
+* Add 3 or more stylists - the stylist commission is between `7%` and `20%`.
 
 ## Using day & date columns
 
