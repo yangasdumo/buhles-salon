@@ -104,12 +104,12 @@ Note that date columns use a format of `yyyy-mm-dd` and time columns use a forma
 
 The query on date & time fields use queries like this:
 
-```
+```sql
 select * from date_test where the slot > '06:00';
 select * from date_test where the slot = '07:00';
 ```
 
-```
+```sql
 select * from test where the the_date > '2022-02-26' and slot = '07:00';
 ```
 
