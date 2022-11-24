@@ -28,7 +28,7 @@ Create these 4 tables:
 
 ## Table structure
 
-All columns have an `id` as primary key
+All tables have an `id` as primary key
 
 * client 
    - first_name
@@ -53,7 +53,9 @@ All columns have an `id` as primary key
     - commission_percentage
         
 
-The `booking` table brings `client` , `treatment` and `stylist` tables together.
+The `booking` table brings `client`, `treatment` and `stylist` tables together.
+
+Create sql scripts to populate the `client`, `treatment` & `stylist` tables.
 
 ## Factory Function
 
@@ -61,17 +63,18 @@ Create a Factory Function called `salonBooking` with the following methods:
 
 Function name            | Description   
 ------------------------ | ---------------
-`getStylist(phoneNumbrt)` 		 | Find all data for stylist by their phone number              
+`getStylist(phoneNumber)` 		 | Find all data for stylist by their phone number              
 `findAllServices()` 		     |  Return all the services offered
-`findStylistsForTreatment()` | Return all the stylists that ever given this treatment, use the booking table. 
-`makeBooking` |  Allow a client to make a booking - a booking require a clientId, serviceId, date & a time. Only 2 bookings max for a serviceId in a given timeslot & date combination is allowed.
-`findAllBookings` |  Find all the bookings that were made
+`makeBooking` |  Allow a client to make a booking - a booking require a clientId, serviceId, date & a time. Only 2 bookings max for a serviceId in a given timeslot & date combination is allowed. Ensure a stylist can't be double booked for the the same date & time combination.
+`findAllBookings(data)` |  Find all the bookings that were made for a given date
 `findClientBookings(clientId)`  |  Find all the bookings for a client - use clientId as lookup
+`findStylistsForTreatment(treatmentId)` | Return all the stylists that ever given this treatment, the booking table id central to this function. 
 `findAllBookings({date, time})` |   Find all the booking made for a specific date & time combination - if only date or time is specified query for only date or time which ever one is specified. If both is specified query for both if no variables are specified return all bookings
-`totalIncome()` | find the total incomr foe the salon so far.
 `totalIncomeForDay(date)` | find the total income for the day specified.
-`mostValuebleClient` | find the client that spend the most money at the salon
-`totalIncomeForMorningBookings(date)`| calculate the total income for all morning bookings for a specified date. Morning bookings are bookings before 12h00.
+`mostValuebleClient()` | find the client that spend the most money at the salon so far
+`totalCommission(date, stylistId)`| calculate the total commission for a given date & stylist
+
+**Note:** you can add extra Factory Function method to support the above factory functions if needed.
 
 ## Factory function setup
 
