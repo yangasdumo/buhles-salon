@@ -106,7 +106,7 @@ Function name            | Description
 ------------------------ | ---------------
 `getStylist(phoneNumber)` 		 | Find all data for stylist by their phone number              
 `findAllServices()` 		     |  Return all the services offered
-`makeBooking` |  Allow a client to make a booking - a booking require a clientId, serviceId, date & a time. Only 2 bookings max for a serviceId in a given timeslot & date combination is allowed. Ensure a stylist can't be double booked for the the same date & time combination.
+`makeBooking(clientId, serviceId, date, time)` |  Allow a client to make a booking - a booking require a clientId, serviceId, date & a time. Only 2 bookings max for a serviceId in a given timeslot & date combination is allowed. Ensure a stylist is not double booked for the the same date & time combination.
 `findAllBookings(data)` |  Find all the bookings that were made for a given date
 `findClientBookings(clientId)`  |  Find all the bookings for a client - use clientId as lookup
 `findStylistsForTreatment(treatmentId)` | Find all the stylists that ever given this treatment, the booking table is central to this function. 
