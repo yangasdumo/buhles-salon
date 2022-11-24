@@ -21,11 +21,11 @@ Create a Factory Function called `SalonBooking` with the following methods:
 
 Function name            | Description   
 ------------------------ | ---------------
-`getStylist(phoneNumber)` 		 | Find all data for stylist by their phone number  
-findClient(phoneNumber) | Find all data for client by their phone number
-findTreatment(phoneNumber) | Find a treatment by it's short code
+`findStylist(phoneNumber)` 		 | Find all data for stylist by their phone number  
+`findClient(phoneNumber)` | Find all data for client by their phone number
+`findTreatment(phoneNumber)` | Find a treatment by it's short code
 `findAllTreatments()` 		     |  Return all the treatments offered
-`makeBooking(clientId, serviceId, date, time)` |  Allow a client to make a booking - a booking require a clientId, serviceId, date & a time. Only 2 bookings max for a serviceId in a given timeslot & date combination is allowed. Ensure a stylist is not double booked for the the same date & time combination.
+`makeBooking(clientId, serviceId, date, time)` |  Allow a client to make a booking - a booking require a clientId, serviceId, date & a time. Only 2 bookings max for a serviceId in a given timeslot & date combination is allowed. Ensure a stylist is not double booked for the the same date & time combination. Booking logic can get very complicated. Lets not go there for now. Focus on the supplied booking rules. 
 `findAllBookings(date)` |  Find all the bookings that were made for a given date
 `findClientBookings(clientId)`  |  Find all the bookings for a client - use clientId as lookup
 `findStylistsForTreatment(treatmentId)` | Find all the stylists that ever given this treatment, the booking table is central to this function. 
@@ -72,7 +72,6 @@ All tables have an `id` as primary key
     - phone_number
     - commission_percentage -> use numeric (3,2)
 
-
 The stylist commission is stored as a decimal amount like `0.15` for `15%` and `0.17` for `17%`.
 
 The `booking` table brings `client`, `treatment` and `stylist` tables together.
@@ -80,32 +79,32 @@ The `booking` table brings `client`, `treatment` and `stylist` tables together.
 Create sql scripts to pre-populate the `client`, `treatment` & `stylist` tables. 
 
 * Add the 4 treatments - use the price chart above.
-* At least 7 clients.
-* At least 5 stylists - the stylist commission is between `7` and `20%`.
+* Add at least 7 clients.
+* Add 5 or more stylists - the stylist commission is between `7%` and `20%`.
 
 ## Using day & date columns
 
 PostgreSQL has special `date` and `time` field types. Use them for the `booking_date` and `booking_time` columns in the `booking` table.
 
-To create a table that has a `date` and `time` slot do soemthing like this:
+To create a table that has a `date` and `time` slot do something like this:
 
 ```sql
 create table date_test ( the_date date,  slot time  );
 ```
 
-To insert data into this column:
+To insert data into these columns:
 
 ```sql
-insert into test (the_date, slot) values ('2022-02-27', '07:00');
+insert into date_test (the_date, slot) values ('2022-02-27', '07:00');
 ```
 
-Note that date columns use a format of `yyyy-mm-dd` and time columns use a format of `2 number colon 2 numbers`.
+Note that date columns use a format of `yyyy-mm-dd` and time columns use a format of `2 number colon 2 numbers` like this `08:00` or `9:15`.
 
 The query on date & time fields use queries like this:
 
 ```
-select * from test where the slot > '06:00';
-select * from test where the slot = '07:00';
+select * from date_test where the slot > '06:00';
+select * from date_test where the slot = '07:00';
 ```
 
 ```
