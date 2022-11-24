@@ -51,11 +51,45 @@ All tables have an `id` as primary key
     - last_name
     - phone_number
     - commission_percentage
-        
 
 The `booking` table brings `client`, `treatment` and `stylist` tables together.
 
 Create sql scripts to populate the `client`, `treatment` & `stylist` tables.
+
+## Using day & date columns
+
+PostgreSQL has special `date` and `time` field types. Use them for the `booking_date` and `booking_time` columns in the `booking` table.
+
+To create a table that has a `date` and `time` slot do soemthing like this:
+
+```sql
+create table date_test ( the_date date,  slot time  );
+```
+
+To insert data into this column:
+
+```sql
+insert into test (the_date, slot) values ('2022-02-27', '07:00');
+```
+
+Note that date columns use a format of `yyyy-mm-dd` and time columns use a format of `2 number colon 2 numbers`.
+
+The query on date & time fields use queries like this:
+
+```
+select * from test where the slot > '06:00';
+```
+
+```
+select * from test where the the_date > '2022-02-26';
+```
+
+You can use `>`, `<` and `=` signs for date and time queries.
+
+You can learn more about dates at the links below, but this is more than what you would to complete this assessment:
+
+* https://www.prisma.io/dataguide/postgresql/date-types
+* https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-date/
 
 ## Factory Function
 
